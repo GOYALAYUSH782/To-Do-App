@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
+//defining the schema for db
 var listItem = new Schema({
     title:{
         type:String,
@@ -15,6 +15,6 @@ var listItem = new Schema({
         required:true,
     }
 })
-
+// exporting the schema
 var list = mongoose.model('list', listItem);
-module.exports.list;
+module.exports = list;
