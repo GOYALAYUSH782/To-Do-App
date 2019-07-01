@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    color: #9C9690;
+    
+}
+#heading{
+    font-family: sans-serif;
+    text-align: center;
+    font-size:3rem;
+    margin: 2%;
+}
+#t2{
+    display: flex;
+    flex-direction: row;
+}
+.lab{
+    margin: 1% !important;
+    padding: 3px;
+    margin-left: 5% !important;
+}
+#cat{
+    border-right: 3px lightgray solid;
+}
+button{
+    background-color: red;
+}
+input,select{
+    border: none;
+    margin-left: 5%;
+    font-color: lightgrey !important;
+    margin: 1%;
+    padding: 5px;
+    font-size: 1.2rem;
+    width:80%;
+}
+select{
+    width:80%;
+    text-align: center;
+}
+#form-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+#form-container div{
+    height: 20%;
+    width: 100%;
+    margin: auto;
+}
+.border-top{
+    border-top: 3px lightgray solid;
+}
+#but{
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+li{
+    height: auto;
+    margin-left: 0%
+}
+#item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    margin: auto;
+}
+#content{
+    width: 35%;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+}
+#heading-title{
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2%;
+}
+#due-date{
+    font-weight: 200;
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 2%;
+    margin: 1%;
+}
+#space{
+    width: 23%;
+}
+.category{
+    color: white;
+    width: 12%;
+    padding: 15px;
+    height: 80%;
+    margin: 2%;
+    text-align: center;
+    font-size: 1.9rem;
+    border-radius: 5px;
+}
+#Work{
+    background-color: #9C00AF;
+}
+#School{
+    background-color: #F2A700;
+}
+#del{
+    background-color: #EE351E;
+}
+#Personal{
+    background-color: darkgreen
+}
+#Cleaning{
+    background-color: darkviolet
+}
+#Others{
+    background-color: lightcoral;
+}
+#create{
+    background-color: #444444;
+    width: 15%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

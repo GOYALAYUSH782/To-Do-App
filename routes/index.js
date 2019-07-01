@@ -4,8 +4,8 @@ const home_Controllers=require('../controllers/home_controller');
 
 //different routes and calling there controllers
 router.get('/',home_Controllers.home);
-router.post('/add',home_Controllers.create);
-router.post('/delete',home_Controllers.destroy);
+router.post('/create',home_Controllers.create);
+router.get('/destroy/:id',home_Controllers.destroy);
 
 
 console.log('router loaded');

@@ -2,7 +2,7 @@ const List=require('../models/list');
 
 // controller when you visit localhost
 module.exports.home=(req,res)=>{
-    List.findById({},(err,item)=>{
+    List.find({},(err,item)=>{
         if(err){
             console.log('error in fetching');
             return;
@@ -21,8 +21,8 @@ module.exports.create=(req,res)=>{
 };
 //controller for deleting the list item
 module.exports.destroy=(req,res)=>{
-    List.findByIdAndDelete({id:req.body.id},(err)=>{
-        if(err){console.log('error in filding the contact'); return;}
+    List.findByIdAndDelete(req.params.id,(err)=>{
+        if(err){console.log('error in finding the contact'); return;}
         return res.redirect('back');
     })
 };

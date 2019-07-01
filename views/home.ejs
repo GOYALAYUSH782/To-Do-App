@@ -1,25 +1,65 @@
 <html>
     <head>
             <title>
-                TO Do App
+                TODO App
             </title>
+            <link rel="shortcut icon" href="fevicon.png" />
+            <link rel="stylesheet" type="text/css" href="/css/home.css">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
     <body>
-        <h1>To Do App</h1>
-        <form action="/create" method="POST">
-            <input type="text" placeholder="What do you need to do" name="title">
-            <input type="text" placeholder="category" name="category">
-            <input type="date" placeholder="when is the event" name="date">
-            <button type="submit">ADD  TASK</button>
-        </form>
+        <h1 id="heading">TODO App</h1>
+        <div id="form-container">
+            <form action="/create" method="POST">
+                <div id="t1" class="border-top">
+                    <div class="lab"><label >DESCRIPTION</label></div>
+                    <input type="text" placeholder="What do you need to do" name="title" required>
+                </div>
+                <div id="t2" class="border-top">
+                    <div id="cat">
+                        <div class="lab"><label >CATEGORY</label></div>
+                        <select name="category" required>
+                            <option value="Personal" selected>Personal</option>
+                            <option value="Work">Work</option>
+                            <option value="School">School</option>
+                            <option value="Cleaning">Cleaning</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div class="lab"><label >DUE DATE</label></div>
+                        <input type="date" placeholder="when is the event" name="date" required>
+                    </div>
+                </div>
+                <div  class="border-top" id="but">
+                    <button id="create" class="category" type="submit"><i class="fas fa-plus"></i> ADD TASK</button>
+                </div>
+            </form>
+        </div>
         <br>
         <br>
         <ul>
             <% for(i of items) {%>
-                <li>
-                    <p><%= i.title%></p>
-                    <p><%= i.category%></p>
-                    <p><%= i.date%></p>
+                <li class="border-top">
+                    <div id="item">
+                        <div id="content">
+                            <div id="heading-title">
+                                <%= i.title%>
+                            </div>
+                            <div id="due-date">
+                                <i class="fas fa-calendar-alt"><%= i.date%></i>
+                            </div>
+                        </div>
+                        <div id="space">
+
+                        </div>
+                        <div id="<%= i.category %>" class="category">
+                            <%= i.category%>
+                        </div>
+                        <div id="del" class="category">
+                            <a href="/destroy/<%= i.id %>"><i class="fas fa-trash-alt"></i> DELETE </a>
+                        </div>
+                    </div>
                 </li>
             <%}%>
         </ul>

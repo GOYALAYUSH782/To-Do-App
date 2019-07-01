@@ -2,14 +2,14 @@
 const express=require('express');
 const app=express();
 const port=8000;
-//const mongoose=require('./config/mongoose');
+const mongoose=require('./config/mongoose');
 
 //middlewares
 app.use(express.urlencoded()); 
 
 
 //setting up static files
-app.use(express.static('./assets'));
+app.use(express.static('assets'));
 
 
 //setting up view engine as ejs
